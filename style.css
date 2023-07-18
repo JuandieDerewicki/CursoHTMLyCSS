@@ -1,0 +1,220 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    width: 100%; /* Para asegurarnos que ocupe todo el ancho */
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav .nav-right-section {
+    width: 250px; /* Es para darle una dimensión al order list y tenga un tamaño definido  */
+    height: auto; /* le definimos una altura en auto para que no sea mas alta que su padre y la toma de forma automática */
+    display: flex; /* Lo convertimos en caja flexible */  
+    list-style: none;
+    justify-content: center; /* Los pone en el centro en el eje principañ */
+    align-items: center; /* Los alineamos en el eje secundario */
+}
+
+nav .nav-right-section a {
+    margin-right: 10px; 
+    color: #000;
+}
+
+nav .nav-right-section .menu-icon {
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat; /* Que no se repita la imagen para llenar el espacio */
+    background-position: center; /* Para que posicione la imagen en el centro  */
+    background-size: contain; /* Se aproxime al tamaño de mi contenedor */
+     width: 25px;
+     height: 25px;
+}
+
+nav .nav-right-section img {
+     border-radius: 50%;
+     margin-left: 15px;
+}
+
+main {
+    margin-top: 150px; /* Porque está muy pegado al header y hay que darle altura */
+    text-align: center; /* Que se centre todo lo que está dentro del main */
+}
+
+main .main-logo {
+    width: 530px;  /* Dimension que va a tomar el logo y vamos a pedir que sea del width del contenedor padre */
+    margin: 0 auto; /*  Sirve para la parte flexible y no tener que estar tocando el margin right y left porque lo que le sobra lo divide por 2 para ocupar todo el espacio  y siempre va a estar en el centro */
+    margin-bottom: 35px;    
+}
+
+main .main-logo img {
+    width: 272px;
+    height: 92px;
+}
+
+main .main-input {
+    width: 530px; /* Que ocupe todo el ancho */
+    margin: 0 auto; /* Que se posicione en el medio */
+    margin-bottom: 35px; /* Para que la seccion del input empuje la seccion de botones que tienen que estar separadas */
+}
+
+main .main-input-container {
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex; /* Colocamos display flex para los tres elementos de esta clase los podamos alinear */
+    justify-content: center; /* Alineamos en el eje principal */
+    align-items: center; /* Alineamos en el eje secundario */
+}
+
+main .main-input input {
+    width: 450px; /* Para que sea mas chico que su contenedor padre */
+    height: 40px;
+    border: none; /* Quitar el borde azul */
+    outline: none; /* Nos sirve para quitar el borde generado cuando damos click a un input */
+}
+
+main .main-input-container:hover { /* Es un pseudoelemento y un efecto para que cuando pasemos el cursor pase algo */
+    box-shadow: 0 1px 6px  0 #20212447;
+    border-color: #dfe1e500;
+}
+
+main .main-input .search-icon {
+    background-image: url("https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-512.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px; /* Casi siempre las imagenes con el width van a poner el height automatico. Si empezamos a modificar el w y h se va a poner feo. */
+    height: 18px;
+    opacity: .45;
+}
+
+main .main-input .micro-icon {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px; /* Casi siempre las imagenes con el width van a poner el height automatico. Si empezamos a modificar el w y h se va a poner feo. */
+    height: 18px;
+    cursor: pointer; /* Porque aca si tiene que aparecer la manita cuando pasemos el cursor por alli */
+}
+
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div {
+    display: inline-block; /* Por defecto están en display: block por eso aparecen uno debajo de otro, tenemos que hacer q esten inline block */
+}
+
+main .main-buttons button {
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px; /* 0 significa q de arriba abajo no haya nada pero si de derecha a izquierda */
+    margin-right: 15px;
+}
+
+main .main-buttons button:hover { /* Es un pseudoelemento y un efecto para que cuando pasemos el cursor pase algo */
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #000001;
+    color: #222;
+}
+
+footer {
+    width: 100%;
+    height: 50px; 
+    position: absolute; /* Para que el footer se quede 100% abajo de la pagina */
+    bottom: 0; /* Es el fondo */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* Estamos generando la cuadricula donde vamos a colocar el contenido y podemos fraccionarlo como queremos */
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul {
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0; /* Para sacar el padding left por defecto de ul */
+}
+
+footer .footer-left {
+    justify-self: left;
+}
+
+footer .footer-right {
+    justify-self: right;
+}
+
+footer ul li a {
+    margin: 10px;
+    color: #5f6368;
+}
+
+
+/*
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html { 
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+} 
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin-left: 1.8rem;
+    margin-top: 0.8rem;
+    margin-right: 1.3rem;
+    font-size: 1.3rem;
+}
+
+header .menu .FotoIcono img {
+    height: 25px;
+}
+
+header .menu .FotoGmail img {
+    height: 35px;
+    border-radius: 50%;
+}
+*/
